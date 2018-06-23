@@ -5,7 +5,14 @@
     <title>login</title>
 </head>
 <body>
-<!--<h1 th:text="${user?.getUserEntity().getLogin()} + ', ' + ${info}"></h1>-->
+<h1>NO SIEMANKO NA MOJEJ STRONIE</h1>
+
+<main id="posts">
+    <article th:each="p : ${messageList}">
+        <h2 class="title" th:text="${p.title}">Post Title</h2>
+        <p class="content" th:utext="${p.content}">Post content</p>
+    </article>
+</main>
 
 <form method="post" action="/index" th:object="${messageForm}">
     <div class="postContainer">

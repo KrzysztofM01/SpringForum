@@ -15,7 +15,6 @@ public class LoginController {
     @Autowired
     UserService userService;
 
-
     @GetMapping("/login")
     public String login(Model model) {
         model.addAttribute("loginForm", new LoginForm());
