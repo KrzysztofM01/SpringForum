@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>login</title>
+</head>
+<body>
+<!--<h1 th:text="${user?.getUserEntity().getLogin()} + ', ' + ${info}"></h1>-->
+
+<form method="post" action="/index" th:object="${messageForm}">
+    <div class="postContainer">
+        <label><b>Title: </b></label>
+        <input type="text" th:field="*{title}"/> <br/>
+        <label><b>Content: </b></label>
+        <textarea th:field="*{content}"></textarea><br/>
+        <button type="submit">Submit post</button>
+    </div>
+</form>
+</body>
+</html>
